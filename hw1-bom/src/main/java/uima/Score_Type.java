@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Tue Sep 10 22:48:16 EDT 2013 */
-package org.apache.uima;
+/* First created by JCasGen Wed Sep 11 12:41:27 EDT 2013 */
+package uima;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -14,9 +14,9 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Sep 10 22:48:16 EDT 2013
+ * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
  * @generated */
-public class Question_Type extends Annotation_Type {
+public class Score_Type extends Annotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -24,25 +24,25 @@ public class Question_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Question_Type.this.useExistingInstance) {
+  			 if (Score_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Question_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Score_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Question(addr, Question_Type.this);
-  			   Question_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Score(addr, Score_Type.this);
+  			   Score_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Question(addr, Question_Type.this);
+        } else return new Score(addr, Score_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Question.typeIndexID;
+  public final static int typeIndexID = Score.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("org.apache.uima.Question");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("uima.Score");
  
   /** @generated */
   final Feature casFeat_casProcessorId;
@@ -51,13 +51,13 @@ public class Question_Type extends Annotation_Type {
   /** @generated */ 
   public String getCasProcessorId(int addr) {
         if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Question");
+      jcas.throwFeatMissing("casProcessorId", "uima.Score");
     return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessorId);
   }
   /** @generated */    
   public void setCasProcessorId(int addr, String v) {
         if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Question");
+      jcas.throwFeatMissing("casProcessorId", "uima.Score");
     ll_cas.ll_setStringValue(addr, casFeatCode_casProcessorId, v);}
     
   
@@ -66,7 +66,7 @@ public class Question_Type extends Annotation_Type {
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public Question_Type(JCas jcas, Type casType) {
+  public Score_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

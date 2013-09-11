@@ -1,7 +1,7 @@
 
 
-/* First created by JCasGen Tue Sep 10 22:48:16 EDT 2013 */
-package org.apache.uima;
+/* First created by JCasGen Wed Sep 11 12:41:27 EDT 2013 */
+package uima;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Sep 10 22:48:16 EDT 2013
+ * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
 public class Score extends Annotation {
@@ -69,14 +69,14 @@ public class Score extends Annotation {
    * @generated */
   public String getCasProcessorId() {
     if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Score");
+      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Score");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Score_Type)jcasType).casFeatCode_casProcessorId);}
     
   /** setter for casProcessorId - sets  
    * @generated */
   public void setCasProcessorId(String v) {
     if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Score");
+      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Score");
     jcasType.ll_cas.ll_setStringValue(addr, ((Score_Type)jcasType).casFeatCode_casProcessorId, v);}    
   }
 

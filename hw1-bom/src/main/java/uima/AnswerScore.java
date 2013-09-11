@@ -1,7 +1,7 @@
 
 
-/* First created by JCasGen Tue Sep 10 22:48:16 EDT 2013 */
-package org.apache.uima;
+/* First created by JCasGen Wed Sep 11 12:41:27 EDT 2013 */
+package uima;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Sep 10 22:48:16 EDT 2013
+ * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
 public class AnswerScore extends Annotation {
@@ -69,14 +69,14 @@ public class AnswerScore extends Annotation {
    * @generated */
   public String getCasProcessorId() {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "org.apache.uima.AnswerScore");
+      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.AnswerScore");
     return jcasType.ll_cas.ll_getStringValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_casProcessorId);}
     
   /** setter for casProcessorId - sets  
    * @generated */
   public void setCasProcessorId(String v) {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "org.apache.uima.AnswerScore");
+      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.AnswerScore");
     jcasType.ll_cas.ll_setStringValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_casProcessorId, v);}    
    
     
@@ -87,14 +87,14 @@ public class AnswerScore extends Annotation {
    * @generated */
   public int getScore() {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_score == null)
-      jcasType.jcas.throwFeatMissing("score", "org.apache.uima.AnswerScore");
+      jcasType.jcas.throwFeatMissing("score", "uima.AnswerScore");
     return jcasType.ll_cas.ll_getIntValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_score);}
     
   /** setter for score - sets  
    * @generated */
   public void setScore(int v) {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_score == null)
-      jcasType.jcas.throwFeatMissing("score", "org.apache.uima.AnswerScore");
+      jcasType.jcas.throwFeatMissing("score", "uima.AnswerScore");
     jcasType.ll_cas.ll_setIntValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_score, v);}    
   }
 

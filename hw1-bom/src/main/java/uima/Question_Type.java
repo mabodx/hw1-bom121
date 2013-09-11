@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Tue Sep 10 22:48:16 EDT 2013 */
-package org.apache.uima;
+/* First created by JCasGen Wed Sep 11 12:41:27 EDT 2013 */
+package uima;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -14,9 +14,9 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Sep 10 22:48:16 EDT 2013
+ * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
  * @generated */
-public class Answer_Type extends Annotation_Type {
+public class Question_Type extends Annotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -24,43 +24,25 @@ public class Answer_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Answer_Type.this.useExistingInstance) {
+  			 if (Question_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Answer_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Question_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Answer(addr, Answer_Type.this);
-  			   Answer_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Question(addr, Question_Type.this);
+  			   Question_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Answer(addr, Answer_Type.this);
+        } else return new Question(addr, Question_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Answer.typeIndexID;
+  public final static int typeIndexID = Question.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("org.apache.uima.Answer");
- 
-  /** @generated */
-  final Feature casFeat_isCorrect;
-  /** @generated */
-  final int     casFeatCode_isCorrect;
-  /** @generated */ 
-  public boolean getIsCorrect(int addr) {
-        if (featOkTst && casFeat_isCorrect == null)
-      jcas.throwFeatMissing("isCorrect", "org.apache.uima.Answer");
-    return ll_cas.ll_getBooleanValue(addr, casFeatCode_isCorrect);
-  }
-  /** @generated */    
-  public void setIsCorrect(int addr, boolean v) {
-        if (featOkTst && casFeat_isCorrect == null)
-      jcas.throwFeatMissing("isCorrect", "org.apache.uima.Answer");
-    ll_cas.ll_setBooleanValue(addr, casFeatCode_isCorrect, v);}
-    
-  
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("uima.Question");
  
   /** @generated */
   final Feature casFeat_casProcessorId;
@@ -69,13 +51,13 @@ public class Answer_Type extends Annotation_Type {
   /** @generated */ 
   public String getCasProcessorId(int addr) {
         if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Answer");
+      jcas.throwFeatMissing("casProcessorId", "uima.Question");
     return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessorId);
   }
   /** @generated */    
   public void setCasProcessorId(int addr, String v) {
         if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Answer");
+      jcas.throwFeatMissing("casProcessorId", "uima.Question");
     ll_cas.ll_setStringValue(addr, casFeatCode_casProcessorId, v);}
     
   
@@ -84,13 +66,9 @@ public class Answer_Type extends Annotation_Type {
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public Answer_Type(JCas jcas, Type casType) {
+  public Question_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
-
- 
-    casFeat_isCorrect = jcas.getRequiredFeatureDE(casType, "isCorrect", "uima.cas.Boolean", featOkTst);
-    casFeatCode_isCorrect  = (null == casFeat_isCorrect) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_isCorrect).getCode();
 
  
     casFeat_casProcessorId = jcas.getRequiredFeatureDE(casType, "casProcessorId", "uima.cas.String", featOkTst);

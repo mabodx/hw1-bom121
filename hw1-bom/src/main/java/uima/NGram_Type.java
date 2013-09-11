@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Tue Sep 10 22:48:16 EDT 2013 */
-package org.apache.uima;
+/* First created by JCasGen Wed Sep 11 12:41:27 EDT 2013 */
+package uima;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Sep 10 22:48:16 EDT 2013
+ * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
  * @generated */
 public class NGram_Type extends Annotation_Type {
   /** @generated */
@@ -42,7 +42,7 @@ public class NGram_Type extends Annotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("org.apache.uima.NGram");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("uima.NGram");
  
   /** @generated */
   final Feature casFeat_casProcessId;
@@ -51,13 +51,13 @@ public class NGram_Type extends Annotation_Type {
   /** @generated */ 
   public String getCasProcessId(int addr) {
         if (featOkTst && casFeat_casProcessId == null)
-      jcas.throwFeatMissing("casProcessId", "org.apache.uima.NGram");
+      jcas.throwFeatMissing("casProcessId", "uima.NGram");
     return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessId);
   }
   /** @generated */    
   public void setCasProcessId(int addr, String v) {
         if (featOkTst && casFeat_casProcessId == null)
-      jcas.throwFeatMissing("casProcessId", "org.apache.uima.NGram");
+      jcas.throwFeatMissing("casProcessId", "uima.NGram");
     ll_cas.ll_setStringValue(addr, casFeatCode_casProcessId, v);}
     
   
@@ -69,19 +69,19 @@ public class NGram_Type extends Annotation_Type {
   /** @generated */ 
   public int getElement(int addr) {
         if (featOkTst && casFeat_element == null)
-      jcas.throwFeatMissing("element", "org.apache.uima.NGram");
+      jcas.throwFeatMissing("element", "uima.NGram");
     return ll_cas.ll_getRefValue(addr, casFeatCode_element);
   }
   /** @generated */    
   public void setElement(int addr, int v) {
         if (featOkTst && casFeat_element == null)
-      jcas.throwFeatMissing("element", "org.apache.uima.NGram");
+      jcas.throwFeatMissing("element", "uima.NGram");
     ll_cas.ll_setRefValue(addr, casFeatCode_element, v);}
     
    /** @generated */
   public int getElement(int addr, int i) {
         if (featOkTst && casFeat_element == null)
-      jcas.throwFeatMissing("element", "org.apache.uima.NGram");
+      jcas.throwFeatMissing("element", "uima.NGram");
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_element), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_element), i);
@@ -91,7 +91,7 @@ public class NGram_Type extends Annotation_Type {
   /** @generated */ 
   public void setElement(int addr, int i, int v) {
         if (featOkTst && casFeat_element == null)
-      jcas.throwFeatMissing("element", "org.apache.uima.NGram");
+      jcas.throwFeatMissing("element", "uima.NGram");
     if (lowLevelTypeChecks)
       ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_element), i, v, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_element), i);

@@ -1,7 +1,7 @@
 
 
-/* First created by JCasGen Tue Sep 10 22:48:16 EDT 2013 */
-package org.apache.uima;
+/* First created by JCasGen Wed Sep 11 12:41:27 EDT 2013 */
+package uima;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 
- * Updated by JCasGen Tue Sep 10 22:48:16 EDT 2013
+/** answer string
+ * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
 public class Answer extends Annotation {
@@ -69,14 +69,14 @@ public class Answer extends Annotation {
    * @generated */
   public boolean getIsCorrect() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
-      jcasType.jcas.throwFeatMissing("isCorrect", "org.apache.uima.Answer");
+      jcasType.jcas.throwFeatMissing("isCorrect", "uima.Answer");
     return jcasType.ll_cas.ll_getBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_isCorrect);}
     
   /** setter for isCorrect - sets  
    * @generated */
   public void setIsCorrect(boolean v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
-      jcasType.jcas.throwFeatMissing("isCorrect", "org.apache.uima.Answer");
+      jcasType.jcas.throwFeatMissing("isCorrect", "uima.Answer");
     jcasType.ll_cas.ll_setBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_isCorrect, v);}    
    
     
@@ -87,14 +87,14 @@ public class Answer extends Annotation {
    * @generated */
   public String getCasProcessorId() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Answer");
+      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Answer");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Answer_Type)jcasType).casFeatCode_casProcessorId);}
     
   /** setter for casProcessorId - sets  
    * @generated */
   public void setCasProcessorId(String v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Answer");
+      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Answer");
     jcasType.ll_cas.ll_setStringValue(addr, ((Answer_Type)jcasType).casFeatCode_casProcessorId, v);}    
   }
 

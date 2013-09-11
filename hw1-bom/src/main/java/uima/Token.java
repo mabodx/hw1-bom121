@@ -1,7 +1,7 @@
 
 
-/* First created by JCasGen Tue Sep 10 22:48:16 EDT 2013 */
-package org.apache.uima;
+/* First created by JCasGen Wed Sep 11 12:41:27 EDT 2013 */
+package uima;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,15 +11,15 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Sep 10 22:48:16 EDT 2013
+ * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
-public class Question extends Annotation {
+public class Token extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Question.class);
+  public final static int typeIndexID = JCasRegistry.register(Token.class);
   /** @generated
    * @ordered 
    */
@@ -31,23 +31,23 @@ public class Question extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Question() {/* intentionally empty block */}
+  protected Token() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public Question(int addr, TOP_Type type) {
+  public Token(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public Question(JCas jcas) {
+  public Token(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public Question(JCas jcas, int begin, int end) {
+  public Token(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);
@@ -68,16 +68,16 @@ public class Question extends Annotation {
   /** getter for casProcessorId - gets 
    * @generated */
   public String getCasProcessorId() {
-    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Question");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((Question_Type)jcasType).casFeatCode_casProcessorId);}
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_casProcessorId == null)
+      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Token");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_casProcessorId);}
     
   /** setter for casProcessorId - sets  
    * @generated */
   public void setCasProcessorId(String v) {
-    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "org.apache.uima.Question");
-    jcasType.ll_cas.ll_setStringValue(addr, ((Question_Type)jcasType).casFeatCode_casProcessorId, v);}    
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_casProcessorId == null)
+      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Token");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_casProcessorId, v);}    
   }
 
     
