@@ -3,7 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.cmu.lti.11791.f13.hw1</groupId>
 	<artifactId>hw1-bom</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.7</version>
+	<scm>
+		<connection>scm:git:git@github.com:mabodx/hw1-bom.git</connection>
+		<developerConnection>scm:git:git@github.com:mabodx/hw1-bom.git</developerConnection>
+	</scm>
 	<repositories>
 		<repository>
 			<id>oaqa</id>
@@ -100,8 +104,5 @@
 			<version>3.2.0</version>
 		</dependency>
 	</dependencies>
-	<scm>
-		<connection>scm:git:git@github.com:mabodx/hw1-bom.git</connection>
-		<developerConnection>scm:git:git@github.com:mabodx/hw1-bom.git</developerConnection>
-	</scm>
+	
 </project>
