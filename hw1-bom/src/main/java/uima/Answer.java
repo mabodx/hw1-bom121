@@ -10,8 +10,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** answer string
- * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
+/** This kind of type is to show a instance of one answer. Also, it answer whether this kind of answer is correct answer or just a wrong answer.
+
+ * Updated by JCasGen Wed Sep 11 22:12:53 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
 public class Answer extends Annotation {
@@ -65,14 +66,16 @@ public class Answer extends Annotation {
   //*--------------*
   //* Feature: isCorrect
 
-  /** getter for isCorrect - gets 
+  /** getter for isCorrect - gets We can know whether this answer is a correct answer or a wrong answer.
+
    * @generated */
   public boolean getIsCorrect() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
       jcasType.jcas.throwFeatMissing("isCorrect", "uima.Answer");
     return jcasType.ll_cas.ll_getBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_isCorrect);}
     
-  /** setter for isCorrect - sets  
+  /** setter for isCorrect - sets We can know whether this answer is a correct answer or a wrong answer.
+ 
    * @generated */
   public void setIsCorrect(boolean v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
@@ -81,21 +84,23 @@ public class Answer extends Annotation {
    
     
   //*--------------*
-  //* Feature: casProcessorId
+  //* Feature: baseAnnotation
 
-  /** getter for casProcessorId - gets 
+  /** getter for baseAnnotation - gets This kind of feature is to inherited from the BaseAnnotation to get the feature of casProcessorId and confidence, so we can get the annotation where it is generated.
+
    * @generated */
-  public String getCasProcessorId() {
-    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Answer");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((Answer_Type)jcasType).casFeatCode_casProcessorId);}
+  public BaseAnnotationType getBaseAnnotation() {
+    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.Answer");
+    return (BaseAnnotationType)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Answer_Type)jcasType).casFeatCode_baseAnnotation)));}
     
-  /** setter for casProcessorId - sets  
+  /** setter for baseAnnotation - sets This kind of feature is to inherited from the BaseAnnotation to get the feature of casProcessorId and confidence, so we can get the annotation where it is generated.
+ 
    * @generated */
-  public void setCasProcessorId(String v) {
-    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Answer");
-    jcasType.ll_cas.ll_setStringValue(addr, ((Answer_Type)jcasType).casFeatCode_casProcessorId, v);}    
+  public void setBaseAnnotation(BaseAnnotationType v) {
+    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.Answer");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Answer_Type)jcasType).casFeatCode_baseAnnotation, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

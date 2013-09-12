@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
+ * Updated by JCasGen Wed Sep 11 12:46:58 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
 public class Score extends Annotation {
@@ -63,21 +63,21 @@ public class Score extends Annotation {
  
     
   //*--------------*
-  //* Feature: casProcessorId
+  //* Feature: baseAnnotation
 
-  /** getter for casProcessorId - gets 
+  /** getter for baseAnnotation - gets 
    * @generated */
-  public String getCasProcessorId() {
-    if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Score");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((Score_Type)jcasType).casFeatCode_casProcessorId);}
+  public BaseAnnotationType getBaseAnnotation() {
+    if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.Score");
+    return (BaseAnnotationType)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Score_Type)jcasType).casFeatCode_baseAnnotation)));}
     
-  /** setter for casProcessorId - sets  
+  /** setter for baseAnnotation - sets  
    * @generated */
-  public void setCasProcessorId(String v) {
-    if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Score");
-    jcasType.ll_cas.ll_setStringValue(addr, ((Score_Type)jcasType).casFeatCode_casProcessorId, v);}    
+  public void setBaseAnnotation(BaseAnnotationType v) {
+    if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.Score");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Score_Type)jcasType).casFeatCode_baseAnnotation, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

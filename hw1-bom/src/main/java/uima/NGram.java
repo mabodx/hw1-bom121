@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 
- * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
+/** This kind of type is a number of token to form the Ngram type.
+ * Updated by JCasGen Wed Sep 11 22:12:53 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
 public class NGram extends Annotation {
@@ -64,34 +64,34 @@ public class NGram extends Annotation {
  
     
   //*--------------*
-  //* Feature: casProcessId
+  //* Feature: baseAnnotation
 
-  /** getter for casProcessId - gets 
+  /** getter for baseAnnotation - gets This kind of feature is to inherited from the BaseAnnotation to get the feature of casProcessorId and confidence, so we can get the annotation where it is generated.
    * @generated */
-  public String getCasProcessId() {
-    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_casProcessId == null)
-      jcasType.jcas.throwFeatMissing("casProcessId", "uima.NGram");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((NGram_Type)jcasType).casFeatCode_casProcessId);}
+  public BaseAnnotationType getBaseAnnotation() {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.NGram");
+    return (BaseAnnotationType)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_baseAnnotation)));}
     
-  /** setter for casProcessId - sets  
+  /** setter for baseAnnotation - sets This kind of feature is to inherited from the BaseAnnotation to get the feature of casProcessorId and confidence, so we can get the annotation where it is generated. 
    * @generated */
-  public void setCasProcessId(String v) {
-    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_casProcessId == null)
-      jcasType.jcas.throwFeatMissing("casProcessId", "uima.NGram");
-    jcasType.ll_cas.ll_setStringValue(addr, ((NGram_Type)jcasType).casFeatCode_casProcessId, v);}    
+  public void setBaseAnnotation(BaseAnnotationType v) {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.NGram");
+    jcasType.ll_cas.ll_setRefValue(addr, ((NGram_Type)jcasType).casFeatCode_baseAnnotation, jcasType.ll_cas.ll_getFSRef(v));}    
    
     
   //*--------------*
   //* Feature: element
 
-  /** getter for element - gets 
+  /** getter for element - gets Each gram is separate by the token in the array. With the length of the array we can get the exact N.
    * @generated */
   public FSArray getElement() {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_element == null)
       jcasType.jcas.throwFeatMissing("element", "uima.NGram");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_element)));}
     
-  /** setter for element - sets  
+  /** setter for element - sets Each gram is separate by the token in the array. With the length of the array we can get the exact N. 
    * @generated */
   public void setElement(FSArray v) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_element == null)
