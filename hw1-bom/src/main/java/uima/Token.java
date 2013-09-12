@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 
- * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
+/** This kind of type is the smallest type in the document. The system will annotate each token span in each question and answer (break on whitespace and punctuation).
+ * Updated by JCasGen Wed Sep 11 22:12:53 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
 public class Token extends Annotation {
@@ -63,21 +63,21 @@ public class Token extends Annotation {
  
     
   //*--------------*
-  //* Feature: casProcessorId
+  //* Feature: baseAnnotation
 
-  /** getter for casProcessorId - gets 
+  /** getter for baseAnnotation - gets This kind of feature is to inherited from the BaseAnnotation to get the feature of casProcessorId and confidence, so we can get the annotation where it is generated.
    * @generated */
-  public String getCasProcessorId() {
-    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Token");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_casProcessorId);}
+  public BaseAnnotationType getBaseAnnotation() {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.Token");
+    return (BaseAnnotationType)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Token_Type)jcasType).casFeatCode_baseAnnotation)));}
     
-  /** setter for casProcessorId - sets  
+  /** setter for baseAnnotation - sets This kind of feature is to inherited from the BaseAnnotation to get the feature of casProcessorId and confidence, so we can get the annotation where it is generated. 
    * @generated */
-  public void setCasProcessorId(String v) {
-    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.Token");
-    jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_casProcessorId, v);}    
+  public void setBaseAnnotation(BaseAnnotationType v) {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.Token");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Token_Type)jcasType).casFeatCode_baseAnnotation, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

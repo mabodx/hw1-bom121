@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
+ * Updated by JCasGen Wed Sep 11 12:46:58 EDT 2013
  * @generated */
 public class Score_Type extends Annotation_Type {
   /** @generated */
@@ -45,20 +45,20 @@ public class Score_Type extends Annotation_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("uima.Score");
  
   /** @generated */
-  final Feature casFeat_casProcessorId;
+  final Feature casFeat_baseAnnotation;
   /** @generated */
-  final int     casFeatCode_casProcessorId;
+  final int     casFeatCode_baseAnnotation;
   /** @generated */ 
-  public String getCasProcessorId(int addr) {
-        if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "uima.Score");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessorId);
+  public int getBaseAnnotation(int addr) {
+        if (featOkTst && casFeat_baseAnnotation == null)
+      jcas.throwFeatMissing("baseAnnotation", "uima.Score");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_baseAnnotation);
   }
   /** @generated */    
-  public void setCasProcessorId(int addr, String v) {
-        if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "uima.Score");
-    ll_cas.ll_setStringValue(addr, casFeatCode_casProcessorId, v);}
+  public void setBaseAnnotation(int addr, int v) {
+        if (featOkTst && casFeat_baseAnnotation == null)
+      jcas.throwFeatMissing("baseAnnotation", "uima.Score");
+    ll_cas.ll_setRefValue(addr, casFeatCode_baseAnnotation, v);}
     
   
 
@@ -71,8 +71,8 @@ public class Score_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_casProcessorId = jcas.getRequiredFeatureDE(casType, "casProcessorId", "uima.cas.String", featOkTst);
-    casFeatCode_casProcessorId  = (null == casFeat_casProcessorId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_casProcessorId).getCode();
+    casFeat_baseAnnotation = jcas.getRequiredFeatureDE(casType, "baseAnnotation", "uima.BaseAnnotationType", featOkTst);
+    casFeatCode_baseAnnotation  = (null == casFeat_baseAnnotation) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_baseAnnotation).getCode();
 
   }
 }

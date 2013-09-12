@@ -10,8 +10,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 
- * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
+/** This kind of type is to give the calculating score of each answer
+
+ * Updated by JCasGen Wed Sep 11 22:12:53 EDT 2013
  * XML source: /Users/mabodx/git/hw1-bom/hw1-bom/src/main/resources/hw1-bom-typesystem.xml
  * @generated */
 public class AnswerScore extends Annotation {
@@ -63,39 +64,57 @@ public class AnswerScore extends Annotation {
  
     
   //*--------------*
-  //* Feature: casProcessorId
+  //* Feature: baseAnnotation
 
-  /** getter for casProcessorId - gets 
+  /** getter for baseAnnotation - gets This kind of feature is to inherited from the BaseAnnotation to get the feature of casProcessorId and confidence, so we can get the annotation where it is generated.
    * @generated */
-  public String getCasProcessorId() {
-    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.AnswerScore");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_casProcessorId);}
+  public BaseAnnotationType getBaseAnnotation() {
+    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.AnswerScore");
+    return (BaseAnnotationType)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_baseAnnotation)));}
     
-  /** setter for casProcessorId - sets  
+  /** setter for baseAnnotation - sets This kind of feature is to inherited from the BaseAnnotation to get the feature of casProcessorId and confidence, so we can get the annotation where it is generated. 
    * @generated */
-  public void setCasProcessorId(String v) {
-    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_casProcessorId == null)
-      jcasType.jcas.throwFeatMissing("casProcessorId", "uima.AnswerScore");
-    jcasType.ll_cas.ll_setStringValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_casProcessorId, v);}    
+  public void setBaseAnnotation(BaseAnnotationType v) {
+    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_baseAnnotation == null)
+      jcasType.jcas.throwFeatMissing("baseAnnotation", "uima.AnswerScore");
+    jcasType.ll_cas.ll_setRefValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_baseAnnotation, jcasType.ll_cas.ll_getFSRef(v));}    
    
     
   //*--------------*
   //* Feature: score
 
-  /** getter for score - gets 
+  /** getter for score - gets we get the score of each answer after we run the processor through  annotator.
    * @generated */
-  public int getScore() {
+  public double getScore() {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_score == null)
       jcasType.jcas.throwFeatMissing("score", "uima.AnswerScore");
-    return jcasType.ll_cas.ll_getIntValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_score);}
+    return jcasType.ll_cas.ll_getDoubleValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_score);}
     
-  /** setter for score - sets  
+  /** setter for score - sets we get the score of each answer after we run the processor through  annotator. 
    * @generated */
-  public void setScore(int v) {
+  public void setScore(double v) {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_score == null)
       jcasType.jcas.throwFeatMissing("score", "uima.AnswerScore");
-    jcasType.ll_cas.ll_setIntValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_score, v);}    
+    jcasType.ll_cas.ll_setDoubleValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_score, v);}    
+   
+    
+  //*--------------*
+  //* Feature: answer
+
+  /** getter for answer - gets this feature is to know the answer sentence that we get our answer score.
+   * @generated */
+  public Answer getAnswer() {
+    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_answer == null)
+      jcasType.jcas.throwFeatMissing("answer", "uima.AnswerScore");
+    return (Answer)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_answer)));}
+    
+  /** setter for answer - sets this feature is to know the answer sentence that we get our answer score. 
+   * @generated */
+  public void setAnswer(Answer v) {
+    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_answer == null)
+      jcasType.jcas.throwFeatMissing("answer", "uima.AnswerScore");
+    jcasType.ll_cas.ll_setRefValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_answer, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

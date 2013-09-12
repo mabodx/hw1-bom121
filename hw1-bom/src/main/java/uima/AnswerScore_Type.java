@@ -13,8 +13,9 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 
- * Updated by JCasGen Wed Sep 11 12:41:27 EDT 2013
+/** This kind of type is to give the calculating score of each answer
+
+ * Updated by JCasGen Wed Sep 11 22:12:53 EDT 2013
  * @generated */
 public class AnswerScore_Type extends Annotation_Type {
   /** @generated */
@@ -45,20 +46,20 @@ public class AnswerScore_Type extends Annotation_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("uima.AnswerScore");
  
   /** @generated */
-  final Feature casFeat_casProcessorId;
+  final Feature casFeat_baseAnnotation;
   /** @generated */
-  final int     casFeatCode_casProcessorId;
+  final int     casFeatCode_baseAnnotation;
   /** @generated */ 
-  public String getCasProcessorId(int addr) {
-        if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "uima.AnswerScore");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessorId);
+  public int getBaseAnnotation(int addr) {
+        if (featOkTst && casFeat_baseAnnotation == null)
+      jcas.throwFeatMissing("baseAnnotation", "uima.AnswerScore");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_baseAnnotation);
   }
   /** @generated */    
-  public void setCasProcessorId(int addr, String v) {
-        if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "uima.AnswerScore");
-    ll_cas.ll_setStringValue(addr, casFeatCode_casProcessorId, v);}
+  public void setBaseAnnotation(int addr, int v) {
+        if (featOkTst && casFeat_baseAnnotation == null)
+      jcas.throwFeatMissing("baseAnnotation", "uima.AnswerScore");
+    ll_cas.ll_setRefValue(addr, casFeatCode_baseAnnotation, v);}
     
   
  
@@ -67,16 +68,34 @@ public class AnswerScore_Type extends Annotation_Type {
   /** @generated */
   final int     casFeatCode_score;
   /** @generated */ 
-  public int getScore(int addr) {
+  public double getScore(int addr) {
         if (featOkTst && casFeat_score == null)
       jcas.throwFeatMissing("score", "uima.AnswerScore");
-    return ll_cas.ll_getIntValue(addr, casFeatCode_score);
+    return ll_cas.ll_getDoubleValue(addr, casFeatCode_score);
   }
   /** @generated */    
-  public void setScore(int addr, int v) {
+  public void setScore(int addr, double v) {
         if (featOkTst && casFeat_score == null)
       jcas.throwFeatMissing("score", "uima.AnswerScore");
-    ll_cas.ll_setIntValue(addr, casFeatCode_score, v);}
+    ll_cas.ll_setDoubleValue(addr, casFeatCode_score, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_answer;
+  /** @generated */
+  final int     casFeatCode_answer;
+  /** @generated */ 
+  public int getAnswer(int addr) {
+        if (featOkTst && casFeat_answer == null)
+      jcas.throwFeatMissing("answer", "uima.AnswerScore");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_answer);
+  }
+  /** @generated */    
+  public void setAnswer(int addr, int v) {
+        if (featOkTst && casFeat_answer == null)
+      jcas.throwFeatMissing("answer", "uima.AnswerScore");
+    ll_cas.ll_setRefValue(addr, casFeatCode_answer, v);}
     
   
 
@@ -89,12 +108,16 @@ public class AnswerScore_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_casProcessorId = jcas.getRequiredFeatureDE(casType, "casProcessorId", "uima.cas.String", featOkTst);
-    casFeatCode_casProcessorId  = (null == casFeat_casProcessorId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_casProcessorId).getCode();
+    casFeat_baseAnnotation = jcas.getRequiredFeatureDE(casType, "baseAnnotation", "uima.BaseAnnotationType", featOkTst);
+    casFeatCode_baseAnnotation  = (null == casFeat_baseAnnotation) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_baseAnnotation).getCode();
 
  
-    casFeat_score = jcas.getRequiredFeatureDE(casType, "score", "uima.cas.Integer", featOkTst);
+    casFeat_score = jcas.getRequiredFeatureDE(casType, "score", "uima.cas.Double", featOkTst);
     casFeatCode_score  = (null == casFeat_score) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_score).getCode();
+
+ 
+    casFeat_answer = jcas.getRequiredFeatureDE(casType, "answer", "uima.Answer", featOkTst);
+    casFeatCode_answer  = (null == casFeat_answer) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_answer).getCode();
 
   }
 }
